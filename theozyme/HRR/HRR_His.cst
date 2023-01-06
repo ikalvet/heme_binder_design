@@ -1,0 +1,31 @@
+# cst constraint descriptor for Heme carbene transferase
+# with ethyl 2-diazoacetate and styrene
+# 1HIS coordinating to the Heme Fe
+# GLU or ASP backing up the HIS
+# I. Kalvet, Baker lab, UW,   ikalvet@uw.edu
+
+# NOTE
+
+
+#block 1 for His coordinated to Zn
+
+CST::BEGIN
+
+  TEMPLATE::   ATOM_MAP: 1 atom_name: FE1 N4 C19
+  TEMPLATE::   ATOM_MAP: 1 residue3:  HRR
+
+  TEMPLATE::   ATOM_MAP: 2 atom_type: Nhis
+  TEMPLATE::   ATOM_MAP: 2 residue3: HIS
+
+  CONSTRAINT:: distanceAB:    2.16   0.23  100.0    1   1
+  CONSTRAINT::    angle_A:   90.0    7.0   100.0  360.  1
+  CONSTRAINT::    angle_B:  126.0   10.0    50.0  360.  1
+  CONSTRAINT::  torsion_A:   83.0    7.0    50.0  360.  1
+  CONSTRAINT:: torsion_AB:   51.4   20.0     0.0   90.  3
+  CONSTRAINT::  torsion_B:  180.0   15.0    25.0  360.  1
+
+  ALGORITHM_INFO:: match
+     MAX_DUNBRACK_ENERGY 50.0
+  ALGORITHM_INFO::END
+
+CST::END
